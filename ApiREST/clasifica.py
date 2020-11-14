@@ -42,7 +42,7 @@ tablaPerform = pd.read_csv("TablaPerformance.csv")
 tablaPerform.set_index('Unnamed: 0', inplace=True)
 
 #Me conecto a la base MongoDB 
-client = MongoClient("mongodb://bigdatateam4:816D4747E4M@hdp-dmz-app1.in.iantel.com.uy/casosAlfa")
+client = MongoClient("mongodb://user:passM@url/folder")
 apiLog = client.casosAlfa['apiLog'] 
 
 # # 2 Definir la api en Flask
