@@ -1,0 +1,31 @@
+Dentro de App2, el lugar para poner la carpeta con la nueva Api es: 
+*********************************************************************
+opt/dev-apis
+
+Como conectarse a la instancia mongo de testing y crear una base y una colección.:
+************************************************************************************
+
+Dentro de app2: 
+
+docker exec -it mongo-apisDev bash   # entro al docker de la base mongo en testing
+mongo # ejecuto un bash de mongo
+show dbs #muestro las bases de datos creadas
+
+use casosAlfa # con "use" se mete en una base, y si no existe la crea
+
+show collections #muestro las colecciones de la base
+
+create collection  #creo la coleccion
+
+
+ESte comando es para crear un indice(ya metido en la base y coleccion
+*************************************
+db.TickAntel_DAY.createIndex(
+  {
+    espectaculoId: 1
+  }
+);
+
+Este comando es para consultar por un registro
+***********************************************
+db.recomendacion.find({"msisdn":"59899393496"});
